@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rs-threadpool-webserver</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { max-width: 48rem; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.6; }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    code { background: rgba(127,127,127,0.18); padding: 0.15rem 0.4rem; border-radius: 4px; }
+    ul { padding-left: 1.25rem; }
+    a { color: inherit; }
+    footer { margin-top: 2.5rem; font-size: 0.9rem; opacity: 0.75; }
+  </style>
+</head>
+<body>
+  <h1>rs-threadpool-webserver</h1>
+  <p>A multi-threaded TCP web server written in pure Rust (no web frameworks).</p>
+
+  <h2>What you get</h2>
+  <ul>
+    <li>Custom fixed-size thread pool (<code>Arc</code> + <code>Mutex</code> + <code>mpsc</code>)</li>
+    <li>HTTP/1.1 request parsing and responses</li>
+    <li>Static file serving with path-traversal protection</li>
+    <li>Graceful 404 / 400 handling without panics</li>
+  </ul>
+
+  <h2>Try it</h2>
+  <ul>
+    <li><a href="/about">/about</a></li>
+    <li><a href="/missing-page">/missing-page</a> (triggers 404)</li>
+    <li><a href="/style.css">/style.css</a></li>
+  </ul>
+
+  <footer>
+    Built with <code>std::net</code>, <code>std::thread</code>, and <code>std::sync</code>.
+  </footer>
+</body>
+</html>
